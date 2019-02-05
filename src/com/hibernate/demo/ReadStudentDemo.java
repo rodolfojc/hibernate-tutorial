@@ -43,11 +43,11 @@ public class ReadStudentDemo {
 			//FIND OUT THE STUDENT'S ID: PRIMARY KEY
 			System.out.println("Save student. Generated id: "+tempStudent.getId());
 			
-			//GET A NEW SESSION ASN START TRANSACTION
+			//GET A NEW SESSION AND START TRANSACTION
 			session = factory.getCurrentSession();
 			session.beginTransaction();
 			
-			//RETREIVE STUDENT BASED CON THE ID PK
+			//RETREIVE STUDENT BASED ON THE ID/PK
 			System.out.println("\nGetting student id: "+tempStudent.getId());
 			
 			Student myStudent = session.get(Student.class, tempStudent.getId());
